@@ -1,0 +1,242 @@
+:root {
+  --maincolor: #0eab06;
+  --iconcolor: rgb(90, 92, 94);
+  --headertextcolor: #aeb2b0;
+  --headercolor: #f8f9fb;
+  --boxcolor: #f1f3f2;
+  --textcolor: #535558;
+  --formlablecolor: #2a2c2b;
+  --viweportcolor: #ffffff;
+  --btn: #cbcbcb;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #f7f8fa;
+  color: #333;
+  padding: 20px;
+}
+
+.desc {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.product .photo {
+  flex: 1;
+  min-width: 300px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.product .photo img {
+  max-width: 100%;
+  max-height: 70vh;
+  border-radius: 4px;
+}
+
+.product .details {
+  flex: 2;
+  padding: 20px;
+}
+
+.product .details h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.product .details p {
+  font-size: 1em;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  color: #555;
+}
+
+.product .details h5 {
+  font-size: 1.4em;
+  color: #27ae60;
+  margin-bottom: 20px;
+}
+
+.cartbutton {
+  padding: 12px 24px;
+  background: #27ae60;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cartbutton:hover {
+  background: #1e8449;
+}
+
+@media (max-width: 768px) {
+  .product {
+    flex-direction: column;
+  }
+
+  .product .photo,
+  .product .details {
+    padding: 15px;
+  }
+
+  .product .details h2 {
+    font-size: 1.8em;
+  }
+
+  .product .details h5 {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .product .details p {
+    font-size: 0.95em;
+  }
+
+  .cartbutton {
+    width: 100%;
+    padding: 12px;
+  }
+}
+.navbar {
+  /* border: saddlebrown 1px solid; */
+  background-color: var(--headercolor);
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+}
+.socialmedia {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: end;
+  gap: 7px;
+  padding: 3.5px;
+}
+.Cartlogo img {
+  position: relative;
+  margin-right: 20px;
+  margin-left: 20px;
+  display: flex;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+.navbarmenuicon {
+  display: none;
+}
+.navbar_products {
+  text-decoration: none;
+  color: var(--headertextcolor);
+  padding: 10px;
+}
+.navbar_SignOut {
+  text-decoration: none;
+  margin-right: 10px;
+  color: var(--headertextcolor);
+  padding: 10px;
+}
+.navbar_products:hover,
+.navbar_SignOut:hover {
+  border: 0px solid var(--maincolor);
+  background-color: var(--maincolor);
+  border-radius: 7px;
+  color: white;
+  /* color: #98f98f; */
+}
+.Cartlogo:hover {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  transform: scale(1.1);
+}
+@media only screen and (max-width: 600px) {
+  .socialmedia {
+    display: none;
+  }
+
+  .navbarmenuicon {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .navbarmenuicon:hover ~ .socialmedia {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  .navbar_products,
+  .navbar_SignOut {
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .SignOut {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .SignOutbtn:hover {
+    background-color: var(--maincolor);
+  }
+}
+
+.dark-mode-btn {
+  background: none;
+  border: 1px solid black;
+  color: black;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Button Hover Effect */
+.dark-mode-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Dark Mode Background */
+body.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+/* Dark Mode Button in Dark Mode */
+body.dark-mode .dark-mode-btn {
+  border-color: white;
+  color: white;
+}
+
+body.dark-mode .dark-mode-btn:hover {
+  background-color: white;
+  color: black;
+}
